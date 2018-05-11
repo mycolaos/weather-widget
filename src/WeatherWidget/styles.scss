@@ -1,0 +1,100 @@
+.weather-front {
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  grid-template-rows: 60px 190px 45px 35px;
+  grid-template-areas: 
+    'top-left . top-right'
+    'main main main'
+    'bottom-left . bottom-right'
+    'footer footer footer';
+
+  color: #fff;
+  font-family: "Myriad Pro", sans-serif;
+
+  &__city {
+    grid-area: top-left;
+
+    padding: 15px 0 0 20px;
+    font-size: 21px;
+    white-space: nowrap;
+  }
+
+  &__temperature {
+    grid-area: top-right;
+
+    padding: 15px 20px 0 0;
+    font-size: 38px;
+    font-weight: 600;
+  }
+
+  &__main {
+    grid-area: main;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__feel {
+    grid-area: bottom-left;
+
+    padding-left: 1em;
+    text-transform: uppercase;
+    font-size: 13px;
+
+    &-label {
+      display: block;
+      white-space: nowrap;
+    }
+  }
+
+  &__humidity {
+    grid-area: bottom-right;
+
+    padding-right: 1em;
+    text-transform: uppercase;
+    font-size: 13px;
+
+    &-label {
+      display: block;
+      white-space: nowrap;
+    }
+  }
+
+  &__days {
+    grid-area: footer;
+
+    display: flex;
+    justify-content: space-between; 
+
+    margin: 0 -1px;
+    padding: 0;
+    list-style: none;
+
+    font-size: 13px;
+
+    &-item {
+      flex: 1 0 0;
+      width: 100%;
+      margin: 1px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #1799b0;
+
+      &--selected {
+        background: none;
+      }
+    }
+  }
+}
+
+
+
+
+
+.weather-back {
+  background: #fff;
+}

@@ -1,0 +1,30 @@
+{
+  "presets": [
+    ["env", { "modules": false }], 
+    "react", 
+    "stage-0"
+  ],
+  "plugins": [
+    "react-hot-loader/babel"
+  ],
+
+  "env": {
+    "test": {
+      "presets": [
+        "env",
+        "react",
+        "stage-0"
+      ],
+      "plugins": [
+        ["babel-plugin-transform-require-ignore",
+          {
+            "extensions": [
+              ".css",
+              ".scss"
+            ]
+          }
+        ]
+      ]
+    }
+  }
+}
